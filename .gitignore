@@ -1,0 +1,27 @@
+# 密钥
+.env
+
+# 虚拟环境
+.venv/
+
+# 本地数据
+data/
+
+# 日志
+logs/
+
+# IDE
+.idea/
+.idea.bak/
+*.pyc
+__pycache__/
+
+# 系统
+.DS_Store
+Thumbs.db
+
+# 临时文件
+*.pyc
+_check.js
+temp_*.docx
+*_backup.docx
