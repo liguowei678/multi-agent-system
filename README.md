@@ -2,7 +2,7 @@
 
 ## 概述
 
-基于 LangGraph 的 Supervisor 多智能体系统+RAG内部知识库检索。Supervisor(temperature=0) 统一调度 Researcher/Analyst/Coder/Reviewer 四个子Agent，意图分类与任务拆解分离为两次独立LLM 调用；集成 MCP 协议（filesystem + Tavily 搜索 + Browser）共 27 个外部工具，stdio传输；五层记忆检索（Redis→Qdrant→Neo4j→关键词兜底→SQLite），LLM 语义抽取三元组写入知识图谱，采用冷热处理机制，记忆 10 天降冷 30 天删除含保护标记；上下文压缩保留最近 16条消息+摘要；动态反思自动触发送检；FastAPI + SSE 逐 token 流式输出，StreamWrapper 透明拦截 LLM 调用零侵入。
+基于 LangGraph 的 Supervisor 多智能体系统+RAG内部知识库检索。Supervisor(temperature=0) 统一调度Researcher/Analyst/Coder/Reviewer四个子Agent，意图分类与任务拆解分离为两次独立LLM 调用；集成 MCP 协议（filesystem + Tavily 搜索 + Browser）共 27 个外部工具，stdio传输；五层记忆检索（Redis→Qdrant→Neo4j→关键词兜底→SQLite），LLM 语义抽取三元组写入知识图谱，采用冷热处理机制，记忆 10 天降冷 30 天删除含保护标记；上下文压缩保留最近 16条消息+摘要；动态反思自动触发送检；FastAPI + SSE 逐 token 流式输出，StreamWrapper 透明拦截 LLM 调用零侵入。
 
 ## 技术栈
 
